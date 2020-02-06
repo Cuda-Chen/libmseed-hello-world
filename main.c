@@ -3,9 +3,10 @@
 
 #include "libmseed.h"
 
-int main(int argc, char **argv)
+int
+main (int argc, char **argv)
 {
-    puts("This libmseed program runs successfully.");
+  puts ("This libmseed program runs successfully.");
 
-    return 0;
+  return 0;
 }

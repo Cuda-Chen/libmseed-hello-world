@@ -22,3 +22,5 @@ $ ./libmseed_hello_world
 # Reference
 - mseedview.c
     - https://github.com/iris-edu/libmseed/blob/master/example/mseedview.c
+- clang-format file
+    - https://github.com/iris-edu/libmseed/blob/master/.clang-format
