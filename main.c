@@ -6,7 +6,7 @@
 
 #include "libmseed.h"
 
-#define VERSION "[libmseed " LIBMSEED_VERSION " ]"
+#define VERSION "[libmseed " LIBMSEED_VERSION "]"
 #define PROGRAMNAME "libmseed_hello_world"
 
 static int8_t verbose  = 0;
@@ -169,6 +169,7 @@ parameter_parse (int argcount, char **argvec)
 static void
 usage (void)
 {
+  fprintf (stderr, "%s version: %s\n\n", PROGRAMNAME, VERSION);
   fprintf (stderr, "Usage: %s [options] file\n\n", PROGRAMNAME);
   fprintf (stderr,
            " ## Options ##\n"
