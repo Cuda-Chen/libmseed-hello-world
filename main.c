@@ -68,17 +68,20 @@ main (int argc, char **argv)
           {
             sptr = (char *)msr->datasamples + (cnt * samplesize);
 
-            if (msr->sampletype == 'i')
+            switch (msr->sampletype)
             {
+            case 'i':
               ms_log (0, "%10d  ", *(int32_t *)sptr);
-            }
-            else if (msr->sampletype == 'f')
-            {
+              break;
+            case 'f':
               ms_log (0, "%10.8g  ", *(float *)sptr);
-            }
-            else if (msr->sampletype == 'd')
-            {
+              break;
+            case 'd':
               ms_log (0, "%10.10g  ", *(double *)sptr);
+              break;
+            default:
+              printf ("you should not be here\n");
+              exit (-1);
             }
 
             cnt++;
