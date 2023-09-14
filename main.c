@@ -40,7 +40,7 @@ main (int argc, char **argv)
     flags |= MSF_UNPACKDATA;
 
   /* Loop over the input file record by record */
-  while ((retcode = ms3_readmsr (&msr, inputfile, NULL, NULL,
+  while ((retcode = ms3_readmsr (&msr, inputfile, 
                                  flags, verbose)) == MS_NOERROR)
   {
     totalrecs++;
@@ -98,7 +98,7 @@ main (int argc, char **argv)
   }
 
   /* Make sure everything is cleaned up */
-  ms3_readmsr (&msr, NULL, NULL, NULL, 0, 0);
+  ms3_readmsr (&msr, NULL, 0, 0);
 
   if (basicsum)
   {
